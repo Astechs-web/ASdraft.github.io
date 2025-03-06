@@ -73,7 +73,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    background: url('/Users/raduionescu/WebDev/AselmoServices/Code/lio.jpg') no-repeat center center/cover;
+    background-image: url('https://images.unsplash.com/photo-1612372992697-81c95501d0d1?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
     background-size: cover;
     background-position: center;
 }
