@@ -73,7 +73,7 @@ nav a:hover {
 
 /* Hero Section */
 .hero {
-    background-image: url('https://github.com/Astechs-web/ASdraft.github.io/blob/main/lio.jpg?raw=true');
+    background: url('https://github.com/Astechs-web/ASdraft.github.io/blob/main/lio.jpg?raw=true');
     background-size: cover;
     background-position: center;
 }
