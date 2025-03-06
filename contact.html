@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | [Your Business Name]</title>
+  <meta name="description" content="Get in touch with [Your Business Name] for professional plumbing services. Call, email, or fill out our contact form today.">
+  <style>
+    /* Overlay that covers the entire viewport and stays on top */
+    .popup-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: auto; /* Ensures the overlay stays on top */
+    }
+    /* Container for the contact form */
+    .popup-content {
+      position: relative;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    /* Optional close button styles */
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #1E3A5F;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+    .close-btn:hover {
+      background: #4682A9;
+    }
+    /* Base styles for the page */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F5F7FA;
+      overflow: hidden; /* Prevent background scroll while overlay is active */
+      text-align: center;
+    }
+    h2 {
+      color: #1E3A5F;
+      margin-top: 0;
+    }
+    form {
+      text-align: left;
+      margin-top: 20px;
+    }
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background: #1E3A5F;
+      color: white;
+      padding: 10px;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+      width: 100%;
+    }
+    button:hover {
+      background: #4682A9;
+    }
+  </style>
+</head>
+<body>
+  <div class="popup-overlay">
+    <div class="popup-content">
+      <button class="close-btn" onclick="window.location.href='index.html';">&times;</button>
+      <h2>Contact Us</h2>
+      <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

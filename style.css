@@ -1,0 +1,245 @@
+
+        /* General Styles */
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #003366, #4682B4); /* Deep Navy to Steel Blue */
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header img {
+    height: 150px;
+    margin-right: 10px;
+}
+
+/* Navigation */
+nav {
+    background: white;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+nav a {
+    color: #003366; /* Deep Navy */
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+nav a:hover {
+    color: #FFB400; /* Vibrant Gold */
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.hamburger .bar {
+      height: 4px;
+      width: 30px;
+      background-color: #003366;
+      margin: 3px 0;
+    }
+    @media (max-width: 768px) {
+      nav a { 
+        display: none; 
+      }
+      .hamburger { 
+        display: flex; 
+      }
+      nav.nav-active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      nav.nav-active a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+
+/* Hero Section */
+.hero {
+    background: url('/Users/raduionescu/WebDev/AselmoServices/Code/lio.jpg') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Call-to-Action */
+.cta {
+    background: linear-gradient(135deg, #FF5733, #FFB400); /* Coral to Gold */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.cta:hover {
+    background: #FF5733; /* Warm Coral */
+}
+
+/* Floating Contact Button */
+.floating-contact-btn {
+    position: fixed;
+    z-index: 10;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #FF5733, #FFB400); /* Vibrant Gold */
+    color: #003366; /* Deep Navy */
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease-in-out;
+}
+.floating-contact-btn:hover {
+    z-index:auto ;
+    background: #FF5733; /* Warm Coral */
+    transform: scale(1.1);
+}
+
+/* Popup Contact Form */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.popup-content {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #FF5733; /* Coral */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.close-btn:hover {
+    background: #cc0000;
+}
+
+/* Form Inputs */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    z-index: 10;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    background: #003366; /* Deep Navy */
+    color: white;
+    z-index: 10;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background: #4682B4; /* Steel Blue */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #003366; /* Deep Navy */
+    color: white;
+}
+
+.cardcontainer {
+            display: grid;
+            align-self: auto;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        .card {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            text-align: center;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .card span {
+            position: relative;
+            z-index: 1;
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .card p {
+            position: relative;
+            z-index: 1;
+            text-align: start;
+            font-size: 15px;
+            margin-top: auto;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #cdd1d3d1;
+            opacity: .85 ;
+            border-radius: 5px;
+            width: 90%;
+            color: #1b1a1a;
+        }
