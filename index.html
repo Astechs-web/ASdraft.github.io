@@ -193,7 +193,7 @@
                             </span>
                             <p class="text-2xl font-extrabold text-dark-grey-900">Phone</p>
                             <p class="text-base leading-7 text-dark-grey-600">Reach out to us by phone</p>
-                            <a class="text-lg font-bold text-blue-600" >+1 604-880-8805</a>
+                            <a id="phone-placeholder" class="text-lg font-bold text-blue-600" > /a>
                             </div>
                             <!--<div class="flex flex-col items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main">
                             <span>
@@ -238,6 +238,12 @@
     </div>-->
     
     <script>
+        function renderPhoneNumber(elementId, parts = ['123', '456', '7890']) {
+    const phone = `${parts[0]}-${parts[1]}-${parts[2]}`;
+    document.getElementById(elementId).textContent = phone;
+  }
+        renderPhoneNumber('phone-placeholder');
+        
         function openPopup() {
             document.getElementById("popupForm").style.display = "flex";
         }
