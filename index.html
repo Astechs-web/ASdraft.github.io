@@ -237,28 +237,9 @@
                         </div/
     </div>-->
     
-    <script>
-        function renderPhoneNumber(elementId, parts = ['604', '880', '8805']) {
-    const phone = `${parts[0]}-${parts[1]}-${parts[2]}`;
-    document.getElementById(elementId).textContent = phone;
-  }
-        renderPhoneNumber('phone-placeholder');
-        
-        function openPopup() {
-            document.getElementById("popupForm").style.display = "flex";
-        }
-        function closePopup() {
-            document.getElementById("popupForm").style.display = "none";
-        }
-
-       function toggleMenu() {
-        const nav = document.getElementById('nav');
-        const hamburger = document.getElementById('hamburger');
-        nav.classList.toggle('nav-active');
-        // Update aria-expanded attribute for accessibility
-        const expanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
-        hamburger.setAttribute('aria-expanded', !expanded);
-    }
-    </script>
+   <script>function renderPhoneNumber(elementId,parts=['880','8805','604']){const phone=`${parts[2]}-${parts[0]}-${parts[1]}`;document.getElementById(elementId).textContent=phone}
+renderPhoneNumber('phone-placeholder');function openPopup(){document.getElementById("popupForm").style.display="flex"}
+function closePopup(){document.getElementById("popupForm").style.display="none"}
+function toggleMenu(){const nav=document.getElementById('nav');const hamburger=document.getElementById('hamburger');nav.classList.toggle('nav-active');const expanded=hamburger.getAttribute('aria-expanded')==='true'||!1;hamburger.setAttribute('aria-expanded',!expanded)}</script>
 </body>
 </html>
