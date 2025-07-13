@@ -182,6 +182,7 @@ button:hover {
 
 /* Footer */
 footer {
+    width: 100%;s    
     text-align: center;
     padding: 30px;
     background: #003366; /* Deep Navy */
